@@ -31,7 +31,7 @@ function LineNumbers({
   return (
     <code style={Object.assign({}, codeStyle, containerStyle)}>
       {getLineNumbers({
-        lines: codeString.replace(/\n$/, '').split('\n'),
+        lines: codeString?.replace(/\n$/, '')?.split('\n'),
         style: numberStyle,
         startingLineNumber
       })}
